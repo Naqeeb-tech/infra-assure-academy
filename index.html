@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Infra Assure Academy | Professional Training & Certification Courses</title>
+<meta name="description" content="Infra Assure Academy delivers professional training in AWS, PMP, networking, cybersecurity, leadership, management and soft skills." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0b1f3a;
+  --blue:#1462ff;
+  --cyan:#00c2ff;
+  --gold:#ffb703;
+  --light:#f5f8ff;
+  --text:#16233b;
+  --muted:#5b6b85;
+  --white:#ffffff;
+  --radius:18px;
+  --shadow:0 18px 45px rgba(11,31,58,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--light);line-height:1.6}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin:auto}
+.section{padding:90px 0}
+.section-head{text-align:center;max-width:720px;margin:0 auto 55px}
+.eyebrow{display:inline-block;background:rgba(20,98,255,.1);color:var(--blue);font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;padding:8px 16px;border-radius:999px;margin-bottom:18px}
+h1,h2,h3{line-height:1.18;letter-spacing:-.02em}
+h2{font-size:clamp(2rem,4vw,2.9rem);color:var(--navy)}
+.section-head p{color:var(--muted);margin-top:16px;font-size:1.05rem}
+.btn{display:inline-flex;align-items:center;gap:10px;border:none;cursor:pointer;font-weight:700;font-size:1rem;padding:15px 30px;border-radius:999px;transition:.3s}
+.btn-primary{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;box-shadow:0 12px 28px rgba(20,98,255,.28)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 36px rgba(20,98,255,.36)}
+.btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.45)}
+.btn-ghost:hover{background:#fff;color:var(--navy)}
+
+/* Header */
+header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(11,31,58,.08)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.15rem;color:var(--navy)}
+.logo-mark{width:44px;height:44px;border-radius:13px;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;display:grid;place-items:center;font-weight:800}
+.logo span small{display:block;font-size:.68rem;color:var(--muted);font-weight:600;letter-spacing:.12em}
+.nav-links{display:flex;gap:30px;font-weight:600;color:var(--muted)}
+.nav-links a:hover{color:var(--blue)}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.menu-btn{display:none;background:none;border:none;font-size:1.7rem;color:var(--navy)}
+
+/* Offer bar */
+.offer-bar{background:linear-gradient(90deg,#ff3d00,#ff9100);color:#fff;text-align:center;padding:12px 16px;font-weight:700}
+.offer-bar b{color:#fff700}
+.offer-timer{display:inline-flex;gap:8px;margin-left:12px}
+.offer-timer span{background:rgba(0,0,0,.25);padding:4px 9px;border-radius:7px;font-variant-numeric:tabular-nums}
+
+/* Hero */
+.hero{position:relative;color:#fff;background:radial-gradient(circle at 15% 20%,#1c4f9c 0%,transparent 45%),linear-gradient(135deg,#071429,#0b1f3a 55%,#123a6b);overflow:hidden}
+.hero-inner{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;padding:100px 0 110px}
+.hero h1{font-size:clamp(2.4rem,5.2vw,4rem);font-weight:800}
+.hero h1 span{background:linear-gradient(90deg,var(--cyan),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{margin:24px 0 34px;color:#c8d6ea;font-size:1.12rem;max-width:560px}
+.hero-stats{display:flex;gap:38px;margin-top:44px;flex-wrap:wrap}
+.hero-stats div strong{display:block;font-size:1.9rem;color:#fff}
+.hero-stats div span{color:#9fb2ca;font-size:.9rem}
+.hero-visual{position:relative}
+.hero-img{border-radius:26px;box-shadow:0 30px 70px rgba(0,0,0,.45);animation:float 6s ease-in-out infinite}
+.hero-badge{position:absolute;background:#fff;color:var(--navy);padding:14px 20px;border-radius:16px;font-weight:800;box-shadow:var(--shadow);animation:float 5s ease-in-out infinite}
+.badge-1{top:-22px;right:-10px}
+.badge-2{bottom:-24px;left:-18px;animation-delay:1.4s}
+.hero-badge small{display:block;font-weight:600;color:var(--muted)}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+
+/* Trust strip */
+.trust{background:#fff;padding:34px 0;border-bottom:1px solid rgba(11,31,58,.07)}
+.trust-row{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-weight:700;color:var(--navy)}
+.trust-row div{display:flex;align-items:center;gap:10px}
+.tick{width:26px;height:26px;border-radius:50%;background:rgba(20,98,255,.12);color:var(--blue);display:grid;place-items:center;font-size:.8rem}
+
+/* Courses */
+.course-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
+.course-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:.35s;position:relative}
+.course-card:hover{transform:translateY(-10px)}
+.course-card img{height:210px;width:100%;object-fit:cover;transition:transform .6s}
+.course-card:hover img{transform:scale(1.08)}
+.course-body{padding:26px}
+.tag{position:absolute;top:18px;left:18px;background:var(--gold);color:#3a2600;font-weight:800;font-size:.72rem;padding:7px 13px;border-radius:999px;text-transform:uppercase;letter-spacing:.08em}
+.tag.blue{background:var(--blue);color:#fff}
+.course-body h3{font-size:1.25rem;color:var(--navy);margin-bottom:10px}
+.course-body p{color:var(--muted);font-size:.95rem;min-height:72px}
+.course-meta{display:flex;justify-content:space-between;align-items:center;margin-top:20px;font-weight:700}
+.price{color:var(--blue)}
+.old-price{color:#94a3b8;text-decoration:line-through;font-weight:600;margin-right:8px}
+.enroll{background:var(--navy);color:#fff;padding:10px 18px;border-radius:999px;font-size:.9rem}
+.enroll:hover{background:var(--blue)}
+
+/* Why us */
+.why{background:#fff}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px}
+.why-card{background:var(--light);padding:34px;border-radius:var(--radius);transition:.3s}
+.why-card:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+.icon{width:58px;height:58px;border-radius:16px;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;display:grid;place-items:center;font-size:1.5rem;margin-bottom:20px}
+.why-card h3{color:var(--navy);margin-bottom:10px}
+.why-card p{color:var(--muted);font-size:.95rem}
+
+/* Reviews */
+.reviews{background:linear-gradient(135deg,#071429,#0b1f3a);color:#fff}
+.reviews .section-head h2{color:#fff}
+.reviews .section-head p{color:#a9bcd4}
+.review-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px}
+.review{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);padding:32px;border-radius:var(--radius);backdrop-filter:blur(8px);transition:.3s}
+.review:hover{transform:translateY(-8px);background:rgba(255,255,255,.11)}
+.stars{color:var(--gold);margin-bottom:14px;letter-spacing:2px}
+.review p{color:#d7e2ef;font-size:.98rem}
+.reviewer{display:flex;align-items:center;gap:14px;margin-top:22px}
+.avatar{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--cyan),var(--blue));display:grid;place-items:center;font-weight:800}
+.reviewer strong{display:block}
+.reviewer span{font-size:.85rem;color:#9fb2ca}
+
+/* CTA */
+.cta{background:linear-gradient(135deg,var(--blue),#0057d8);color:#fff;text-align:center}
+.cta h2{color:#fff}
+.cta p{color:#dbe7ff;max-width:640px;margin:18px auto 34px}
+.cta-form{display:flex;gap:12px;max-width:560px;margin:auto;flex-wrap:wrap;justify-content:center}
+.cta-form input{flex:1;min-width:240px;padding:16px 20px;border:none;border-radius:999px;font-size:1rem}
+.cta-form button{background:var(--gold);color:#3a2600}
+
+/* Footer */
+footer{background:#071429;color:#9fb2ca;padding:70px 0 30px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+footer h4{color:#fff;margin-bottom:18px}
+footer a{display:block;margin-bottom:11px;font-size:.94rem}
+footer a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:50px;padding-top:24px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.88rem}
+
+/* Animations */
+.reveal{opacity:0;transform:translateY(38px);transition:all .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.visible{opacity:1;transform:none}
+
+/* Responsive */
+@media(max-width:960px){
+  .hero-inner{grid-template-columns:1fr;padding:70px 0}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .nav-links{display:none}
+  .menu-btn{display:block}
+  .nav-cta .btn{display:none}
+}
+@media(max-width:620px){
+  .section{padding:65px 0}
+  .footer-grid{grid-template-columns:1fr}
+  .hero-stats{gap:22px}
+}
+</style>
+</head>
+<body>
+
+<div class="offer-bar">
+  🎉 Limited-Time Offer: Get up to <b>40% OFF</b> on all professional certification courses — Hurry, seats are filling fast!
+  <span class="offer-timer">
+    <span id="d">00</span>d :
+    <span id="h">00</span>h :
+    <span id="m">00</span>m :
+    <span id="s">00</span>s
+  </span>
+</div>
+
+<header>
+  <div class="container nav">
+    <a href="#home" class="logo">
+      <div class="logo-mark">IA</div>
+      <span>Infra Assure Academy<small>TRAIN • CERTIFY • GROW</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#courses">Courses</a>
+      <a href="#why">Why Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-primary">Enroll Now</a>
+      <button class="menu-btn">☰</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container hero-inner">
+    <div class="reveal">
+      <span class="eyebrow" style="background:rgba(255,255,255,.12);color:var(--cyan)">Professional Training Academy</span>
+      <h1>Build Future-Ready Skills with <span>Infra Assure Academy</span></h1>
+      <p>Advance your career with expert-led training in AWS, PMP, networking, cybersecurity, leadership, management and essential soft skills — designed for professionals and corporate teams.</p>
+      <a href="#courses" class="btn btn-primary">Explore Courses</a>
+      <a href="#contact" class="btn btn-ghost">Request Corporate Training</a>
+      <div class="hero-stats">
+        <div><strong>5,000+</strong><span>Professionals Trained</span></div>
+        <div><strong>50+</strong><span>Expert-Led Courses</span></div>
+        <div><strong>95%</strong><span>Learner Satisfaction</span></div>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <!-- Replace with your AI-generated realistic training image -->
+      <img class="hero-img" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Professionals attending professional training">
+      <div class="hero-badge badge-1">🎓 Certification Ready<small>AWS • PMP • Cisco</small></div>
+      <div class="hero-badge badge-2">⭐ 4.9/5 Learner Rating<small>Trusted by professionals</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="container trust-row reveal">
+    <div><span class="tick">✓</span> Industry-Expert Trainers</div>
+    <div><span class="tick">✓</span> Online & Classroom Training</div>
+    <div><span class="tick">✓</span> Corporate Team Programs</div>
+    <div><span class="tick">✓</span> Practical, Career-Focused Learning</div>
+  </div>
+</section>
+
+<section class="section" id="courses">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Most In-Demand Courses</span>
+      <h2>Choose a Course That Accelerates Your Career</h2>
+      <p>Our most popular programs focus on cloud, project management, networking, cybersecurity, leadership and professional development.</p>
+    </div>
+
+    <div class="course-grid">
+      <article class="course-card reveal">
+        <span class="tag">Best Seller</span>
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="AWS cloud training">
+        <div class="course-body">
+          <h3>AWS Cloud Solutions Architect</h3>
+          <p>Master cloud architecture, deployment, security, scalability and AWS best practices for real enterprise environments.</p>
+          <div class="course-meta">
+            <div><span class="old-price">AED 2,499</span><span class="price">AED 1,499</span></div>
+            <a href="#contact" class="enroll">Enroll</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="course-card reveal">
+        <span class="tag blue">High Demand</span>
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="PMP project management training">
+        <div class="course-body">
+          <h3>PMP® Project Management Professional</h3>
+          <p>Learn project planning, agile and hybrid delivery, risk management, stakeholder leadership and PMP exam preparation.</p>
+          <div class="course-meta">
+            <div><span class="old-price">AED 2,199</span><span class="price">AED 1,299</span></div>
+            <a href="#contact" class="enroll">Enroll</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="course-card reveal">
+        <span class="tag">Trending</span>
+        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Networking training">
+        <div class="course-body">
+          <h3>Networking & CCNA Preparation</h3>
+          <p>Build strong skills in routing, switching, IP addressing, network security, troubleshooting and enterprise connectivity.</p>
+          <div class="course-meta">
+            <div><span class="old-price">AED 1,899</span><span class="price">AED 1,099</span></div>
+            <a href="#contact" class="enroll">Enroll</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="course-card reveal">
+        <span class="tag blue">Career Boost</span>
+        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80" alt="Cybersecurity training">
+        <div class="course-body">
+          <h3>Cybersecurity & Ethical Hacking</h3>
+          <p>Develop practical skills in threat detection, vulnerability assessment, security operations and cyber-risk protection.</p>
+          <div class="course-meta">
+            <div><span class="old-price">AED 2,799</span><span class="price">AED 1,699</span></div>
+            <a href="#contact" class="enroll">Enroll</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="course-card reveal">
+        <span class="tag">Popular</span>
+        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=80" alt="Leadership and management training">
+        <div class="course-body">
+          <h3>Leadership & Management Excellence</h3>
+          <p>Strengthen strategic thinking, team leadership, decision-making, performance management and organizational influence.</p>
+          <div class="course-meta">
+            <div><span class="old-price">AED 1,599</span><span class="price">AED 899</span></div>
+            <a href="#contact" class="enroll">Enroll</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="course-card reveal">
+        <span class="tag blue">Essential</span>
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Soft skills training">
+        <div class="course-body">
+          <h3>Professional Soft Skills</h3>
+          <p>Improve communication, confidence, presentation, negotiation, emotional intelligence and workplace collaboration.</p>
+          <div class="course-meta">
+            <div><span class="old-price">AED 999</span><span class="price">AED 599</span></div>
+            <a href="#contact" class="enroll">Enroll</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section why" id="why">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why Infra Assure Academy</span>
+      <h2>Training Designed for Real Career Growth</h2>
+      <p>We combine expert instruction, practical labs, flexible delivery and career-focused learning outcomes.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="icon">👨‍🏫</div><h3>Expert Trainers</h3><p>Learn from experienced industry professionals with real-world project and certification expertise.</p></div>
+      <div class="why-card reveal"><div class="icon">💻</div><h3>Hands-On Learning</h3><p>Practice through case studies, labs, simulations and workplace-focused exercises.</p></div>
+      <div class="why-card reveal"><div class="icon">🏢</div><h3>Corporate Programs</h3><p>Customized team training for companies across IT, infrastructure, finance, HR and operations.</p></div>
+      <div class="why-card reveal"><div class="icon">📜</div><h3>Certification Support</h3><p>Get structured exam preparation, practice questions, revision sessions and completion certification.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section reviews" id="reviews">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" style="background:rgba(255,255,255,.12);color:var(--gold)">Learner Reviews</span>
+      <h2>What Our Learners Say</h2>
+      <p>Professionals trust Infra Assure Academy for practical training, supportive trainers and career-changing results.</p>
+    </div>
+    <div class="review-grid">
+      <div class="review reveal">
+        <div class="stars">★★★★★</div>
+        <p>“The AWS training was excellent. The trainer explained complex cloud concepts in a simple, practical way. I felt confident applying the skills immediately at work.”</p>
+        <div class="reviewer"><div class="avatar">AR</div><div><strong>Ahmed R.</strong><span>Cloud Engineer</span></div></div>
+      </div>
+      <div class="review reveal">
+        <div class="stars">★★★★★</div>
+        <p>“I completed the PMP preparation course and highly recommend it. The mock tests, real project examples and trainer support made preparation much easier.”</p>
+        <div class="reviewer"><div class="avatar">SK</div><div><strong>Sara K.</strong><span>Project Manager</span></div></div>
+      </div>
+      <div class="review reveal">
+        <div class="stars">★★★★★</div>
+        <p>“The leadership and soft-skills program helped me communicate more confidently and manage my team better. One of the best training experiences I have had.”</p>
+        <div class="reviewer"><div class="avatar">MJ</div><div><strong>Mohammed J.</strong><span>Operations Lead</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta" id="contact">
+  <div class="container reveal">
+    <span class="eyebrow" style="background:rgba(255,255,255,.15);color:#fff">Limited Seats Available</span>
+    <h2>Grab Your Course at the Offer Price</h2>
+    <p>Enroll today and save up to 40% on selected professional training programs. Offer valid for a limited time only.</p>
+    <form class="cta-form" onsubmit="event.preventDefault(); alert('Thank you! Our admissions team will contact you shortly.');">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <button class="btn" type="submit">Claim Discount</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="color:#fff;margin-bottom:18px">
+          <div class="logo-mark">IA</div>
+          <span>Infra Assure Academy<small>TRAIN • CERTIFY • GROW</small></span>
+        </div>
+        <p>Professional training academy delivering career-focused courses in cloud, networking, cybersecurity, project management, leadership and soft skills.</p>
+      </div>
+      <div>
+        <h4>Popular Courses</h4>
+        <a href="#courses">AWS Cloud</a><a href="#courses">PMP Certification</a><a href="#courses">Networking & CCNA</a><a href="#courses">Cybersecurity</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#why">About Us</a><a href="#reviews">Reviews</a><a href="#contact">Corporate Training</a><a href="#contact">Contact</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:info@infraassureacademy.com">info@infraassureacademy.com</a>
+        <a href="tel:+971500000000">+971 50 000 0000</a>
+        <a href="#">Dubai, United Arab Emirates</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Infra Assure Academy. All rights reserved.</span>
+      <span>Privacy Policy • Terms • Refund Policy</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Scroll reveal animation
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+// Discount countdown: 7 days from first visit
+let end=localStorage.getItem('ia_offer_end');
+if(!end){end=Date.now()+7*24*60*60*1000;localStorage.setItem('ia_offer_end',end)}
+end=Number(end);
+function tick(){
+  let diff=Math.max(0,end-Date.now());
+  const d=Math.floor(diff/86400000),h=Math.floor(diff/3600000)%24,m=Math.floor(diff/60000)%60,s=Math.floor(diff/1000)%60;
+  document.getElementById('d').textContent=String(d).padStart(2,'0');
+  document.getElementById('h').textContent=String(h).padStart(2,'0');
+  document.getElementById('m').textContent=String(m).padStart(2,'0');
+  document.getElementById('s').textContent=String(s).padStart(2,'0');
+}
+tick();setInterval(tick,1000);
+</script>
+</body>
+</html>
